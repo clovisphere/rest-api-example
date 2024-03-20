@@ -3,7 +3,7 @@
 > The idea is to build the same rest(ful) api using different programming languages and/or frameworks.
 
 
-## Language & Framework 
+## Programming Languages & Frameworks 
 
 1. [Elixir](https://elixir-lang.org/)
    - [ ] [Phoenix]()
