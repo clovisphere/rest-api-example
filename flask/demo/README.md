@@ -22,8 +22,8 @@ Prerequiste:
 
 > Clone project & CD into it
 ```console
-$ git clone git@github.com:clovisphere/webservice-examples.git
-$ cd webservice-examples/flask/demo
+$ git clone git@github.com:clovisphere/rest-api-example.git
+$ cd rest-api-example/flask/demo
 ```
 
 Without [Docker](https://www.docker.com/):
@@ -116,7 +116,7 @@ $ http --auth demo:demo :8000/get-auth-token
 
 **(Request)**
 ```console
-$ http :8000/api/v1/farmers 'Authorization: Bearer eyJpZCI6MX0.ZfmhLw.vK1YtdBZmUZLoD55AqKIPGuyOyA'
+$ http -A bearer --auth 'eyJpZCI6MX0.ZfmhLw.vK1YtdBZmUZLoD55AqKIPGuyOyA' GET http://localhost:8000/api/v1/farmers
 ```
 
 **(Response)**
