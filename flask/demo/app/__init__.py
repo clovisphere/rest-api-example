@@ -5,7 +5,7 @@ from config.default import config
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
 
-from flask import Flask, g
+from flask import Flask, g  # type: ignore
 
 db = SQLAlchemy(model_class=Base)
 
@@ -37,8 +37,8 @@ def create_app(config_name: str) -> Any:
         return {"token": g.user.generate_auth_token()}
 
     # register blueprints
-    from app.errors import bp as errors_bp
     from app.api import bp as api_bp
+    from app.errors import bp as errors_bp
 
     app.register_blueprint(errors_bp)
     app.register_blueprint(api_bp, url_prefix="/api/v1")

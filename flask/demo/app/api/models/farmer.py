@@ -1,8 +1,8 @@
-from sqlalchemy import String
-from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app import db
 from app.api.models.farm import Farm
 from app.api.models.mixins import Timestamp
+from sqlalchemy import String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 
 class Farmer(db.Model, Timestamp):  # type: ignore

@@ -1,7 +1,7 @@
 from app.api import bp as api
 from app.api.models.farmer import Farmer
 
-from flask import jsonify
+from flask import jsonify  # type: ignore
 
 
 @api.route("/farmers/<int:id>", methods=["GET"])

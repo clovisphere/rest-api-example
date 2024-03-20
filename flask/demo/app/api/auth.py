@@ -1,10 +1,10 @@
 from typing import Any
 
-from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 from app.api.models.user import User
 from app.api.routes.error import error_response
+from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
 
-from flask import g
+from flask import g  # type: ignore
 
 basic_auth = HTTPBasicAuth()
 token_auth = HTTPTokenAuth()

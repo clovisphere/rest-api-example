@@ -46,7 +46,6 @@ $ poetry shell
 $ poetry install
 ```
 
-
 > Run migrations
 
 ```console
@@ -57,6 +56,22 @@ $ flask db upgrade
 ```
 
 If you need any help with migration, please refer to [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/).
+
+> Create dummy/test user
+
+```console
+# run a shell in the app context
+$ flask shell
+```
+
+```python
+# inside the (flask) shell
+user = User(username='demo')
+user.set_password('demo')
+db.session.add(user)
+db.session.commit()
+exit()
+```
 
 > Start the app
 
