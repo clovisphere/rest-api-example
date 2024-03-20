@@ -1,8 +1,8 @@
 from typing import Any
 
 from flask_httpauth import HTTPBasicAuth, HTTPTokenAuth
-from src.api.models.user import User
-from src.api.routes.error import error_response
+from app.api.models.user import User
+from app.api.routes.error import error_response
 
 from flask import g
 

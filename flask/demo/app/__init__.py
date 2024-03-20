@@ -29,16 +29,18 @@ def create_app(config_name: str) -> Any:
         return response, status
 
     # define a token generation route
-    from src.api.auth import basic_auth
+    from app.api.auth import basic_auth
 
     @app.route("/get-auth-token", methods=["GET"])
     @basic_auth.login_required
     def get_auth_token() -> dict:
         return {"token": g.user.generate_auth_token()}
 
-    # register api blueprint
-    from src.api import bp
+    # register blueprints
+    from app.errors import bp as errors_bp
+    from app.api import bp as api_bp
 
-    app.register_blueprint(bp, url_prefix="/api/v1")
+    app.register_blueprint(errors_bp)
+    app.register_blueprint(api_bp, url_prefix="/api/v1")
 
     return app

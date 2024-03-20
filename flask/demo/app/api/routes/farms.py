@@ -1,5 +1,5 @@
-from src.api import bp as api
-from src.api.models.farm import Farm
+from app.api import bp as api
+from app.api.models.farm import Farm
 
 from flask import jsonify
 

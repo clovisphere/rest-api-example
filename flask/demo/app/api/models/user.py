@@ -3,8 +3,8 @@ from typing import Any
 from itsdangerous import URLSafeTimedSerializer as TimedSerializer
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
-from src import db
-from src.api.models.mixins import Timestamp
+from app import db
+from app.api.models.mixins import Timestamp
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from flask import current_app

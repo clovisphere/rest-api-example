@@ -1,7 +1,7 @@
 from sqlalchemy import ForeignKey, String
 from sqlalchemy.orm import Mapped, mapped_column
-from src import db
-from src.api.models.mixins import Timestamp
+from app import db
+from app.api.models.mixins import Timestamp
 
 
 class Farm(db.Model, Timestamp):  # type: ignore
